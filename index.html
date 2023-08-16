@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="starting-app"></div>
+      <app-header></app-header>
+      <main>
+        <div class="login">
+          <div class="content">
+            <div class="title">Enter your mobile number</div>
+            <label for="mobile-number">Mobile number</label>
+            <br />
+            <input
+              type="number"
+              name="mobile-number"
+              id="mobile-number"
+              placeholder="Enter your mobile number"
+              min="0"
+              style="
+                border-radius: 4px;
+                border: 1px solid var(--neutrals-azureish-white, #e1e3ed);
+                outline: 1px solid var(--neutrals-azureish-white, #e1e3ed);
+                color: var(--neutrals-silver-sand, #bac2c7);
+                font-family: Sora;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%;
+                padding: 12px !important;
+                width: 100%;
+                margin-bottom: 25px;
+              "
+            />
+            <br />
+            <button class="btn" onclink="toEnterPassword()">Continue</button>
+          </div>
+        </div>
+        <div class="create-accaunt"></div>
+      </main>
+      <app-footer></app-footer>
+    </div>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

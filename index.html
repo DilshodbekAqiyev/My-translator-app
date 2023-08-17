@@ -3,49 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Google Translate</title>
     <link rel="stylesheet" href="index.css" />
+    <!-- Font Aweasome Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
   <body>
     <div class="container">
-      <div id="starting-app"></div>
-      <app-header></app-header>
-      <main>
-        <div class="login">
-          <div class="content">
-            <div class="title">Enter your mobile number</div>
-            <label for="mobile-number">Mobile number</label>
-            <br />
-            <input
-              type="number"
-              name="mobile-number"
-              id="mobile-number"
-              placeholder="Enter your mobile number"
-              min="0"
-              style="
-                border-radius: 4px;
-                border: 1px solid var(--neutrals-azureish-white, #e1e3ed);
-                outline: 1px solid var(--neutrals-azureish-white, #e1e3ed);
-                color: var(--neutrals-silver-sand, #bac2c7);
-                font-family: Sora;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 150%;
-                padding: 12px !important;
-                width: 100%;
-                margin-bottom: 25px;
-              "
-            />
-            <br />
-            <button class="btn" onclink="toEnterPassword()">Continue</button>
-          </div>
+      <div class="wrapper">
+        <ul class="controls">
+          <li class="row from">
+            <div class="icons">
+              <i id="from" class="fas fa-volume-up"></i>
+              <i id="from" class="fas fa-copy"></i>
+            </div>
+            <select></select>
+          </li>
+          <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+          <li class="row to">
+            <select></select>
+            <div class="icons">
+              <i id="to" class="fas fa-volume-up"></i>
+              <i id="to" class="fas fa-copy"></i>
+            </div>
+          </li>
+        </ul>
+        <div class="text-input">
+          <textarea spellcheck="false" class="from-text" placeholder="Enter text"></textarea>
+          <textarea
+            spellcheck="false"
+            readonly
+            disabled
+            class="to-text"
+            placeholder="Translation"
+          ></textarea>
         </div>
-        <div class="create-accaunt"></div>
-      </main>
-      <app-footer></app-footer>
+      </div>
     </div>
-
+    <script src="./countries.js"></script>
     <script type="module" src="./index.js"></script>
   </body>
 </html>
